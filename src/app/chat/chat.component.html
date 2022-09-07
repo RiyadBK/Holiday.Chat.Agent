@@ -1,7 +1,7 @@
 <div>Holiday Recommendations</div>
 
 <div>Is your budget £20 - £50 or £50 - £270?</div>
-<button>£20 - £50</button><button (click)="removeSelected([3, 4, 5])">£50 - £270</button>
+<button>£20 - £50</button><button (click)="removeSelected([3, 4, 5, 8, 12, 15, 19])">£50 - £270</button>
 
 <div>What type of location are you looking for?</div>
 <button (click)="removeSelected([11])">City</button><button>Mountain</button><button>Sea</button>
@@ -16,4 +16,6 @@
 <button>Europe</button><button>North America</button><button>Africa</button><button>Asia</button><button>Australia</button>
 
 <div>Check Recommendations</div>
-<button (click)="checkRecommendations()">Result</button>
+<li *ngFor="let holidayRecommendation of holidayRecommendations">
+    <span>{{holidayRecommendation.name}}</span>
+</li>
