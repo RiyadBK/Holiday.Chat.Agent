@@ -1,10 +1,10 @@
 <div>Holiday Recommendations</div>
 
 <div>Is your budget £20 - £50 or £50 - £270?</div>
-<button (click)="firstQuestionAsked(1, 2)">£20 - £50</button><button>£50 - £270</button>
+<button>£20 - £50</button><button (click)="removeSelected([3, 4, 5])">£50 - £270</button>
 
 <div>What type of location are you looking for?</div>
-<button>City</button><button>Mountain</button><button>Sea</button>
+<button (click)="removeSelected([11])">City</button><button>Mountain</button><button>Sea</button>
 
 <div>What temperature are you looking for?</div>
 <button>Cold</button><button>Mild</button><button>Hot</button>
@@ -14,3 +14,6 @@
 
 <div>Which continent would you like to travel to?</div>
 <button>Europe</button><button>North America</button><button>Africa</button><button>Asia</button><button>Australia</button>
+
+<div>Check Recommendations</div>
+<button (click)="checkRecommendations()">Result</button>

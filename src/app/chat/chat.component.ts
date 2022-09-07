@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  holidayRecommendations = [
+   holidayRecommendations = [
       { id: 0, name: "Uptown at Bali, Indonesia" },
       { id: 1, name: "Relaxamax at New Orleans, USA" },
       { id: 2, name: "WindyBeach at Ventry, Ireland" },
@@ -39,30 +39,17 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  startQuestions() {
-
-  }
+  removeSelected(selected:number[]): any {
+    selected.forEach((selectedId)=> {
+      this.holidayRecommendations.splice(this.holidayRecommendations.findIndex((holiday) => {
+        return holiday.id === selectedId
+      }), 1);
+    })
+    console.log(this.holidayRecommendations)
+}
 
   checkRecommendations() {
-    if (this.holidayRecommendations.length = 1) {
-      this.showFinalRecommendation()
-    }
+    console.log(this.holidayRecommendations)
   }
 
-  showFinalRecommendation() {
-
-  }
-
-  firstQuestionAsked(id: number) {
-    this.holidayRecommendations = this.holidayRecommendations.filter(item => item.id !== id);
-    console.log(this.holidayRecommendations);
-  }
-
-  secondQuestionAsked() {
-
-  }
-
-  thirdQuestionAsked() {
-
-  }
 }
