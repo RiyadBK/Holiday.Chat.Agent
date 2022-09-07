@@ -7,30 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  holidayRecommendations = 
-  [
-    "Uptown at Bali, Indonesia",
-    "Relaxamax at New Orleans, USA",
-    "WindyBeach at Ventry, Ireland",
-    "Twighlight at Marrakech, Morocco",
-    "TooHot at Sydney, Australia",
-    "Castaway at The Maldives",
-    "Eiffel Park at Paris, France",
-    "The Cape at Cape Town, South Africa",
-    "Desert Dreams at Dubai, United Arab Emirates",
-    "Sea Views at Bora Bora, French Polynesia",
-    "Apple City at New York, U.S.A",
-    "Island Hopper at Dubrovnik, Croatia",
-    "Castle Town at Edinburgh, Scotland",
-    "Wine Valley at Rome, Italy",
-    "Weary Traveller at Paro Valley, Bhutan",
-    "Hot Times at Jaipur, India",
-    "Forest Retreat at Waikato, New Zealand",
-    "Casablance at Havana, Cuba",
-    "Tech City at Tokyo, Japan",
-    "Ice Hotel at Base Marambio, Antartica",
-    "NorthStar at Greenland",
-  ];
+  holidayRecommendations = [
+      { id: 0, name: "Uptown at Bali, Indonesia" },
+      { id: 1, name: "Relaxamax at New Orleans, USA" },
+      { id: 2, name: "WindyBeach at Ventry, Ireland" },
+      { id: 3, name: "Twighlight at Marrakech, Morocco" },
+      { id: 4, name: "TooHot at Sydney, Australia" },
+      { id: 5, name: "Castaway at The Maldives" },
+      { id: 6, name: "Eiffel Park at Paris, France" },
+      { id: 7, name: "The Cape at Cape Town, South Africa" },
+      { id: 8, name: "Desert Dreams at Dubai, United Arab Emirates" },
+      { id: 9, name: "Sea Views at Bora Bora, French Polynesia" },
+      { id: 10, name: "Apple City at New York, U.S.A" },
+      { id: 11, name: "Island Hopper at Dubrovnik, Croatia" },
+      { id: 12, name: "Castle Town at Edinburgh, Scotland" },
+      { id: 13, name: "Wine Valley at Rome, Italy" },
+      { id: 14, name: "Weary Traveller at Paro Valley, Bhutan" },
+      { id: 15, name: "Hot Times at Jaipur, India" },
+      { id: 16, name: "Forest Retreat at Waikato, New Zealand" },
+      { id: 17, name: "Casablance at Havana, Cuba" },
+      { id: 18, name: "Tech City at Tokyo, Japan" },
+      { id: 19, name: "Ice Hotel at Base Marambio, Antartica" },
+      { id: 20, name: "NorthStar at Greenland" }
+    ];
+
   questionNumber = 0;
   firstQuestion: boolean = false;
 
@@ -50,16 +50,12 @@ export class ChatComponent implements OnInit {
   }
 
   showFinalRecommendation() {
-    this.holidayRecommendations = this.holidayRecommendations;
+
   }
 
-  firstQuestionAsked(msg: string) {
-    const index: number = this.holidayRecommendations.indexOf(msg);
-
-    if(this.firstQuestion = true) {
-      this.holidayRecommendations.splice(index, 1)
-      console.log(this.holidayRecommendations)
-    }
+  firstQuestionAsked(id: number) {
+    this.holidayRecommendations = this.holidayRecommendations.filter(item => item.id !== id);
+    console.log(this.holidayRecommendations);
   }
 
   secondQuestionAsked() {
