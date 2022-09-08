@@ -41,6 +41,24 @@ export class ChatComponent implements OnInit {
 
   questionNumber = 1;
 
+  cheap = false;
+  expensive = false;
+  city = false;
+  mountain = false;
+  sea = false;
+  cold = false;
+  mild = false;
+  hot = false;
+  lazy = false;
+  active = false;
+  europe = false;
+  northAmerica = false;
+  africa = false;
+  arctic = false;
+  antartica = false;
+  asia = false;
+  australia = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -80,5 +98,56 @@ export class ChatComponent implements OnInit {
     window.location.reload();
   }
 
+  choseCheap() {
+    this.cheap = true;
+  }
+  choseExpensive() {
+    this.expensive = true;
+  }
+  choseCity() {
+    this.city = true;
+  }
+  choseMountain() {
+    this.mountain = true;
+  }
+  choseSea() {
+    this.sea = true;
+  }
+  choseCold() {
+    this.cold = true;
+  }
+  choseMild() {
+    this.mild = true;
+  }
+  choseHot() {
+    this.hot = true;
+  }
+  choseLazy() {
+    this.lazy = true;
+  }
+  choseActive() {
+    this.active = true;
+  }
+  choseEurope() {
+    this.europe = true;
+  }
+  choseNorthAmerica() {
+    this.northAmerica = true;
+  }
+  choseAfrica() {
+    this.africa = true;
+  }
+  choseArctic() {
+    this.arctic = true;
+  }
+  choseAntartica() {
+    this.antartica = true;
+  }
+  choseAsia() {
+    this.asia = true;
+  }
+  choseAustralia() {
+    this.australia = true;
+  }
 
 }
