@@ -69,11 +69,6 @@ export class ChatComponent implements OnInit {
       return !otherList.includes(holidayRecommendation.id);
     })
     
-    console.log(this.newList)
+    console.log(this.newList.length)
   }
-
-  checkRecommendations() {
-    console.log(this.holidayRecommendations)
-  }
-
 }
