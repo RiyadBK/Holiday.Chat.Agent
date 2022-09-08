@@ -4,71 +4,72 @@
 
         <div class="title">Find Holiday Recommendations</div>
 
-        <div>
+        <div *ngIf="this.questionNumber == 1">
             <div>Is your budget £20 - £50 or £50 - £270?</div>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([19, 20, 0, 5, 16, 7, 11, 18, 4, 8, 15], 'budget')">£0 - £55</button>
+                (click)="removeSelected([19, 20, 0, 5, 16, 7, 11, 18, 4, 8, 15], 'budget'); incrementQuestion();">£0 -
+                £55</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([9, 13, 12, 3, 6, 2, 17, 1, 10, 14], 'budget')">£56 - £300</button>
+                (click)="removeSelected([9, 13, 12, 3, 6, 2, 17, 1, 10, 14], 'budget'); incrementQuestion();">£56 -
+                £300</button>
         </div>
 
-        <div>
+        <div *ngIf="this.questionNumber == 2">
             <div>What type of location are you looking for?</div>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 2, 3, 4, 5, 7, 8, 9, 11, 13, 15, 16, 19, 20], 'terrain')">City</button>
+                (click)="removeSelected([0, 2, 3, 4, 5, 7, 8, 9, 11, 13, 15, 16, 19, 20], 'terrain'); incrementQuestion();">City</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([1, 2, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 17, 18], 'terrain')">Mountain</button>
+                (click)="removeSelected([1, 2, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 17, 18], 'terrain'); incrementQuestion();">Mountain</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 3, 6, 8, 10, 12, 13, 14, 16, 17, 18, 19, 20], 'terrain')">Sea</button>
+                (click)="removeSelected([0, 1, 3, 6, 8, 10, 12, 13, 14, 16, 17, 18, 19, 20], 'terrain'); incrementQuestion();">Sea</button>
         </div>
 
-        <div>
+        <div *ngIf="this.questionNumber == 3">
             <div>What temperature are you looking for?</div>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 'temp')">Cold</button>
+                (click)="removeSelected([0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 'temp'); incrementQuestion();">Cold</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([3, 4, 8, 15, 19, 20], 'temp')">Mild</button>
+                (click)="removeSelected([3, 4, 8, 15, 19, 20], 'temp'); incrementQuestion();">Mild</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20], 'temp')">Hot</button>
+                (click)="removeSelected([0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20], 'temp'); incrementQuestion();">Hot</button>
         </div>
 
-        <div>
+        <div *ngIf="this.questionNumber == 4">
             <div>Would you like an active or lazy holiday?</div>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 2, 6, 7, 8, 9, 10, 11, 13, 16, 18, 19, 20], 'activelazy')">Lazy</button>
+                (click)="removeSelected([0, 2, 6, 7, 8, 9, 10, 11, 13, 16, 18, 19, 20], 'activelazy'); incrementQuestion();">Lazy</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([1, 3, 4, 5, 12, 14, 15, 17], 'activelazy')">Active</button>
+                (click)="removeSelected([1, 3, 4, 5, 12, 14, 15, 17], 'activelazy'); incrementQuestion();">Active</button>
         </div>
 
-        <div>
+        <div *ngIf="this.questionNumber == 5">
             <div>Which continent would you like to travel to?</div>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 3, 4, 5, 7, 8, 9, 10, 13, 15, 16, 17, 18, 19, 20], 'continent')">Europe</button>
+                (click)="removeSelected([0, 1, 3, 4, 5, 7, 8, 9, 10, 13, 15, 16, 17, 18, 19, 20], 'continent'); incrementQuestion();">Europe</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20], 'continent')">North
+                (click)="removeSelected([0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20], 'continent'); incrementQuestion();">North
                 America</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'continent')">Africa</button>
+                (click)="removeSelected([0, 1, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'continent'); incrementQuestion();">Africa</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'continent')">Arctic</button>
+                (click)="removeSelected([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 'continent'); incrementQuestion();">Arctic</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20], 'continent')">Antartica</button>
+                (click)="removeSelected([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20], 'continent'); incrementQuestion();">Antartica</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 16, 17, 19, 20], 'continent')">Asia</button>
+                (click)="removeSelected([1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 16, 17, 19, 20], 'continent'); incrementQuestion();">Asia</button>
             <button type="button" class="btn btn-primary btn-sm"
-                (click)="removeSelected([0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20], 'continent')">Australia</button>
+                (click)="removeSelected([0, 1, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20], 'continent'); incrementQuestion();">Australia</button>
         </div>
 
     </div>
 
-    <div *ngIf="this.newList.length <= 3">
+    <div *ngIf="this.questionNumber == 6 || this.newList.length <= 3">
         <div class="title">Your Holiday Recommendations</div>
         <li *ngFor="let holidayRecommendation of newList">
             <span>{{holidayRecommendation.name}}</span>
         </li>
-
-        <button type="button" class="btn btn-primary btn-sm" (click)="reloadPage()">Try again?</button>
-
+        <div *ngIf="this.newList.length == 0">No holiday recommendations found, please try again</div>
+        <button type="button" class="btn btn-primary btn-sm" (click)="reloadPage()">Try again</button>
     </div>
 
 </div>

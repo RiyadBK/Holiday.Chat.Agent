@@ -32,14 +32,14 @@ export class ChatComponent implements OnInit {
   ];
 
   newList = this.holidayRecommendations;
-  questionNumber = 0;
-  firstQuestion: boolean = false;
-
+  
   budgetList: number[] = [];
   terrainList: number[] = [];
   tempList: number[] = [];
   activelazyList: number[] = [];
   continentList: number[] = [];
+
+  questionNumber = 1;
 
   constructor() { }
 
@@ -69,11 +69,16 @@ export class ChatComponent implements OnInit {
       return !otherList.includes(holidayRecommendation.id);
     })
     
-    console.log(this.newList.length)
+    console.log(this.newList)
+  }
+
+  incrementQuestion() {
+    this.questionNumber = this.questionNumber + 1;
   }
 
   reloadPage() {
     window.location.reload();
   }
-  
+
+
 }
