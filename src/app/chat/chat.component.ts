@@ -71,4 +71,9 @@ export class ChatComponent implements OnInit {
     
     console.log(this.newList.length)
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
+  
 }
