@@ -32,7 +32,7 @@ export class ChatComponent implements OnInit {
   ];
 
   newList = this.holidayRecommendations;
-  
+
   budgetList: number[] = [];
   terrainList: number[] = [];
   tempList: number[] = [];
@@ -65,19 +65,19 @@ export class ChatComponent implements OnInit {
   }
 
   removeSelected(selected: number[], category: string): any {
-    if(category == "budget") {
+    if (category == "budget") {
       this.budgetList = selected
     }
-    if(category == "terrain") {
+    if (category == "terrain") {
       this.terrainList = selected
     }
-    if(category == "temp") {
+    if (category == "temp") {
       this.tempList = selected
     }
-    if(category == "activelazy") {
+    if (category == "activelazy") {
       this.activelazyList = selected
     }
-    if(category == "continent") {
+    if (category == "continent") {
       this.continentList = selected
     }
 
@@ -86,7 +86,7 @@ export class ChatComponent implements OnInit {
     this.newList = this.holidayRecommendations.filter((holidayRecommendation) => {
       return !otherList.includes(holidayRecommendation.id);
     })
-    
+
     console.log(this.newList)
   }
 
