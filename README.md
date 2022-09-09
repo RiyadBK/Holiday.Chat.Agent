@@ -1,6 +1,6 @@
 # HolidayChatAgent
 
-A chat agent that recommends holiday locations based off user's answers to questions.
+A chat agent that recommends holiday locations based on user's answers to questions.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
